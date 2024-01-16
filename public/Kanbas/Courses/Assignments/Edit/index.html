@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Edit</title>
+    </head>
+    <select name="speed-grader">
+        <option value="Speed-Grader">SpeedGrader</option>
+    </select>
+    <hr>
+    <form>
+        <h2>Assignment Name</h2>
+        <input type="text" placeholder="A1 - ENV + HTML">
+        <br />
+        <br />
+        <textarea name="assignment-description" cols="20" rows="2" placeholder="This is the assginment Description"></textarea>
+        <br />
+        <br />
+        <label>Points</label>
+        <br />
+        <input type="number" placeholder="100">
+        <br />
+        <br />
+        <label>Assignment Group</label>
+        <br />
+        <select name="assignment-group">
+            <option value="ASSSIGNMENTS">Assignments</option>
+        </select>
+        <br />
+        <br />
+
+        <label>Display Grade as</label>
+        <br />
+        <select name="display-grade-as">
+            <option value="Percentage">Percentage</option>
+        </select>
+        <br />
+        <br />
+
+        <label>Submission Type</label>
+        <br />
+        <select name="submission-type">
+            <option value="Online">Online</option>
+        </select>
+
+        <br />
+        <br />
+
+        <label>Online Entry Options</label>
+        <br />
+        <label><input name="online-entry-options" value="TEXTENTRY" type="checkbox" />Text Entry</label>
+        <br />
+        <label><input name="online-entry-options" value="WEBSITE URL" type="checkbox" />Website URL</label>
+        <br />
+        <label><input name="online-entry-options" value="MEDIARECORDINGS" type="checkbox" />Media Recordings</label>
+        <br />
+        <label><input name="online-entry-options" value="STUDENTANNOTATION" type="checkbox" />Student Annotation</label>
+        <br />
+        <label><input name="online-entry-options" value="FILEUPLOADS" type="checkbox" />File Uploads</label>
+        <br />
+        <br />
+
+        <label>Assign</label>
+        <br />
+        <label for="Assign">Assign to</label>
+        <br />
+        <input type="text" placeholder="Everyone">
+        <br />
+        <br />
+        <label>Due</label>
+        <br />
+        <input type="date" value="2000-01-01"/>
+        <br />
+        <br />
+
+        <label>Available From</label>
+        <br />
+        <input type="date" value="2000-01-01"/>
+
+        <br />
+        <br />
+        <label>Until</label>
+        <br />
+        <input type="date" value="2000-01-01"/>
+
+        <br />
+        <br />
+        <button type="button">Cancel</button>
+        <button type="button">Save</button>
+    </form>
+</html>
