@@ -1,14 +1,23 @@
 function KanbasNavigation() {
-        return `
-        <ul>
-        <li><a href="../Account/Navigation/index.html">Account</a></li>
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Courses</a></li>
-        <li><a href="#">Calendar</a></li>
-        <li><a href="#">Inbox</a></li>
-        <li><a href="#">History</a></li>
-        <li><a href="#">Studio</a></li>
-        <li><a href="#">Commons</a></li>
-        <li><a href="#">Help</a></li>
+    const links =[
+        {name: "Account", url: "../Account/Navigation/index.html"},
+        {name: "Dashboard", url: "#"},
+        {name: "Courses", url: "#"},
+        {name: "Calendar", url: "#"},
+        {name: "Inbox", url: "#"},
+        {name: "History", url: "#"},
+        {name: "Studio", url: "#"},
+        {name: "Commons", url: "#"},
+        {name: "Help", url: "#"},
+    ];
+    return `
+        <ul style="background-color: black; padding-left: 0px; list-style-type: none">
+            ${links
+                .map((link) => {
+                    return `
+                        <li style="padding: 20px"><a style="font-family: arial; color: white; text-decoration: none" href="${link.url}">${link.name}</a></li>
+                    `;
+                })
+                .join("")}
       </ul> `;
 }   
