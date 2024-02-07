@@ -1,24 +1,71 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="utf-8" />
-        <script src="../../Navigation/index.js"></script>
-        <script src="../../Courses/Navigation/index.js"></script>
+        <title>Home</title>
+        <link rel="stylesheet" href="../../../styles.css" />
+        <link rel="stylesheet" href="../../Navigation/index.css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
     </head>
     <body>
         <table width="100%">
         <tbody>
             <tr>
                 <td valign="top">
-                    <script>
-                        const kanbasNavigation = KanbasNavigation();
-                        document.write(kanbasNavigation);
-                    </script>
-                </td>
+                    <ul class="wd-kanbas-navigation">
+                        <li>
+                          <a href="../../Account/Profile/screen.html"><i class="fa-solid fa-user icon-account"></i>Account</a>
+                        </li>
+                        <li>
+                          <a href="../../Dashboard/screen.html"><i class="fa-solid fa-gauge"></i>Dashboard</a>
+                        </li>
+                        <li class="wd-active">
+                          <a href="../../Courses/Home/screen.html"><i class="fa-solid fa-book"></i>Courses</a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fa-solid fa-calendar-days"></i>Calendar</a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fa-solid fa-inbox"></i> Inbox</a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fa-regular fa-clock"></i> History</a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fa-solid fa-photo-film"></i> Studio</a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Commons</a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fa-solid fa-circle-question"></i> Help</a>
+                        </li>
+                      </ul>
+                  </td>
+
                 <td valign="top">
-                    <script>
-                        const courseNavigation = CourseNavigation("Home");
-                        document.write(courseNavigation);
-                    </script>
+                    <div>
+                        <ul>
+                            <li><a href="../Home/screen.html">Home</a></li>
+                            <li><a href="#">Modules</a></li>
+                            <li><a href="#">Piazza</a></li>
+                            <li><a href="#">Zoom Meetings</a></li>
+                            <li><a href="../Assignments/screen.html">Assignments</a></li>
+                            <li><a href="#">Quizzes</a></li>
+                            <li><a href="../Grades/screen.html">Grades</a></li>
+                            <li><a href="#">People</a></li>
+                            <li><a href="#">Panopto Video</a></li>
+                            <li><a href="#">Discussions</a></li>
+                            <li><a href="#">Announcements</a></li>
+                            <li><a href="#">Pages</a></li>
+                            <li><a href="#">Files</a></li>
+                            <li><a href="#">Rubrics</a></li>
+                            <li><a href="#">Outcomes</a></li>
+                            <li><a href="#">Collaborations</a></li>
+                            <li><a href="#">Syllabus</a></li>
+                            <li><a href="../Settings/Course_details/screen.html">Settings</a></li>
+                        </ul>
+                    </div>
                 </td>
                 
                 <td valign="top">
@@ -104,6 +151,7 @@
                         </table> 
                     </div>
                 </td>
+                    
             </tr>
         </table>
         </tbody>

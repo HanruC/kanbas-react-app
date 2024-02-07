@@ -1,69 +1,100 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Grades</title>
-        <script src="../../Navigation/index.js"></script>
-    </head>
-    <body>
-        <table width="100%">
-            <tbody>
-                <tr>
-                    <td valign="top">
-                        <script>
-                            const kanbasNavigation = KanbasNavigation();
-                            document.write(kanbasNavigation);
-                        </script>
-                    </td>
 
-                    <td valign="top">
-                        <ul>
-                            <li><a href="../Home/screen.html">Home</a></li>
-                            <li><a href="#">Modules</a></li>
-                            <li><a href="#">Piazza</a></li>
-                            <li><a href="#">Zoom Meetings</a></li>
-                            <li><a href="../Assignments/screen.html">Assignments</a></li>
-                            <li><a href="#">Quizzes</a></li>
-                            <li><a href="../Grades/screen.html">Grades</a></li>
-                            <li><a href="#">People</a></li>
-                            <li><a href="#">Panopto Video</a></li>
-                            <li><a href="#">Discussions</a></li>
-                            <li><a href="#">Announcements</a></li>
-                            <li><a href="#">Pages</a></li>
-                            <li><a href="#">Files</a></li>
-                            <li><a href="#">Rubrics</a></li>
-                            <li><a href="#">Outcomes</a></li>
-                            <li><a href="#">Collaborations</a></li>
-                            <li><a href="#">Syllabus</a></li>
-                            <li><a href="../Settings/Course_details/">Settings</a></li>
-                        </ul>
-                    </td>
+<head>
+    <meta charset="UTF-8">
+    <title>Grades</title>
+    <link rel="stylesheet" href="../../../styles.css" />
+    <link rel="stylesheet" href="../../Navigation/index.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+</head>
 
-                    <td valign="top">
-                        <select name="Gradebook">
-                            <option value="Gradebook">Gradebook</option>
-                       </select> 
-                       <button type="button">Import</button>
-                       <select name="Export">
-                            <option value="Export">Export</option>
-                       </select>
-                       <button type="button">Configure</button>
+<body>
+    <table width="100%">
+        <tbody>
+            <tr>
+                <td valign="top">
+                    <ul class="wd-kanbas-navigation">
+                        <li>
+                            <a href="../../Account/Profile/screen.html"><i
+                                    class="fa-solid fa-user icon-account"></i>Account</a>
+                        </li>
+                        <li class="wd-active">
+                            <a href="#"><i class="fa-solid fa-gauge"></i>Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="../../Courses/Home/screen.html"><i class="fa-solid fa-book"></i>Courses</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-calendar-days"></i>Calendar</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-inbox"></i> Inbox</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-regular fa-clock"></i> History</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-photo-film"></i> Studio</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Commons</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa-solid fa-circle-question"></i> Help</a>
+                        </li>
+                    </ul>
+
+                </td>
+
+                <td valign="top">
+                    <ul>
+                        <li><a href="../Home/screen.html">Home</a></li>
+                        <li><a href="#">Modules</a></li>
+                        <li><a href="#">Piazza</a></li>
+                        <li><a href="#">Zoom Meetings</a></li>
+                        <li><a href="../Assignments/screen.html">Assignments</a></li>
+                        <li><a href="#">Quizzes</a></li>
+                        <li><a href="../Grades/screen.html">Grades</a></li>
+                        <li><a href="#">People</a></li>
+                        <li><a href="#">Panopto Video</a></li>
+                        <li><a href="#">Discussions</a></li>
+                        <li><a href="#">Announcements</a></li>
+                        <li><a href="#">Pages</a></li>
+                        <li><a href="#">Files</a></li>
+                        <li><a href="#">Rubrics</a></li>
+                        <li><a href="#">Outcomes</a></li>
+                        <li><a href="#">Collaborations</a></li>
+                        <li><a href="#">Syllabus</a></li>
+                        <li><a href="../Settings/Course_details/">Settings</a></li>
+                    </ul>
+                </td>
+
+                <td valign="top">
+                    <select name="Gradebook">
+                        <option value="Gradebook">Gradebook</option>
+                    </select>
+                    <button type="button">Import</button>
+                    <select name="Export">
+                        <option value="Export">Export</option>
+                    </select>
+                    <button type="button">Configure</button>
                     </div>
-            
+
                     <div>
-                    <form>
-                        <h2>Student Names</h2>
-                        <input type="text" id="'search students" placeholder="Search Students">
-                        <h2>Assignment Names</h2>
-                        <input type="text" id="'search assignments" placeholder="Search Assignments">
-                        <br>
-                        <br>
-                        <button type="button">Apply Filters</button>
-                    </form>
+                        <form>
+                            <h2>Student Names</h2>
+                            <input type="text" id="'search students" placeholder="Search Students">
+                            <h2>Assignment Names</h2>
+                            <input type="text" id="'search assignments" placeholder="Search Assignments">
+                            <br>
+                            <br>
+                            <button type="button">Apply Filters</button>
+                        </form>
                     </div>
                     <br />
-            
+
                     <div>
-                        <table border="1", width="100%" align="center">
+                        <table border="1" , width="100%" align="center">
                             <thead>
                                 <tr>
                                     <th>Student Name</th>
@@ -89,7 +120,7 @@
                                     <td align="center">87</td>
                                     <td align="center">100</td>
                                 </tr>
-            
+
                                 <tr>
                                     <td align="center">Princes Leia</td>
                                     <td align="center">98</td>
@@ -102,7 +133,7 @@
                                     <td align="center">84</td>
                                     <td align="center">92</td>
                                 </tr>
-            
+
                                 <tr>
                                     <td align="center">Luke Skywalker</td>
                                     <td align="center"><input type="text" value="99" size="5" readonly></td>
@@ -115,7 +146,7 @@
                                     <td align="center">100</td>
                                     <td align="center">93</td>
                                 </tr>
-            
+
                                 <tr>
                                     <td align="center">Han Solo</td>
                                     <td align="center">83</td>
@@ -127,9 +158,9 @@
                                     <td align="center"><input type="text" value="86" size="5" readonly></td>
                                     <td align="center">80</td>
                                     <td align="center">84</td>
-            
+
                                 </tr>
-            
+
                                 <tr>
                                     <td align="center">Lando Calrissian</td>
                                     <td align="center">83</td>
@@ -142,7 +173,7 @@
                                     <td align="center">87</td>
                                     <td align="center">95</td>
                                 </tr>
-            
+
                                 <tr>
                                     <td align="center">Boba Fet</td>
                                     <td align="center">85</td>
@@ -155,7 +186,7 @@
                                     <td align="center">87</td>
                                     <td align="center">96</td>
                                 </tr>
-            
+
                                 <tr>
                                     <td align="center">Darth Vader</td>
                                     <td align="center">81</td>
@@ -168,7 +199,7 @@
                                     <td align="center">80</td>
                                     <td align="center">82</td>
                                 </tr>
-            
+
                                 <tr>
                                     <td align="center">Obi Wan Kenobi</td>
                                     <td align="center"><input type="text" value="85" size="5" readonly></td>
@@ -181,7 +212,7 @@
                                     <td align="center">92</td>
                                     <td align="center">80</td>
                                 </tr>
-            
+
                                 <tr>
                                     <td align="center">R2-D2</td>
                                     <td align="center">81</td>
@@ -194,7 +225,7 @@
                                     <td align="center">85</td>
                                     <td align="center">96</td>
                                 </tr>
-            
+
                                 <tr>
                                     <td align="center">C-3PO</td>
                                     <td align="center">94</td>
@@ -207,7 +238,7 @@
                                     <td align="center">85</td>
                                     <td align="center">87</td>
                                 </tr>
-            
+
                                 <tr>
                                     <td align="center">Admiral Ackbar</td>
                                     <td align="center">82</td>
@@ -221,9 +252,10 @@
                                     <td align="center">99</td>
                                 </tr>
                             </thead>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </body>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
 </html>

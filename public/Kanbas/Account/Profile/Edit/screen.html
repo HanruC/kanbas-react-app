@@ -1,113 +1,127 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Edit</title>
-  </head>
 
-  <body>
-    <table width="100%">
-      <tbody>
-        <tr>
-          <td valign="top">
-            <ul>
-              <li><a href="../../Profile/screen.html">Account</a></li>
-              <li><a href="#">Dashboard</a></li>
-              <li><a href="../../../Courses/Home/screen.html">Courses</a></li>
-              <li><a href="#">Calendar</a></li>
-              <li><a href="#">Inbox</a></li>
-              <li><a href="#">History</a></li>
-              <li><a href="#">Studio</a></li>
-              <li><a href="#">Commons</a></li>
-              <li><a href="#">Help</a></li>
-            </ul>
-          </td>
+<head>
+  <meta charset="UTF-8">
+  <title>Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../../../../styles.css" />
+  <link rel="stylesheet" href="../../../Navigation/index.css" />
+</head>
 
-          <td valign="top">
-            <ul>
-              <li><a href="#">Notifications</a></li>
-              <li><a href="../../Profile/screen.html">Profile</a></li>
-              <li><a href="#">Files</a></li>
-              <li><a href="#">Settings</a></li>
-              <li><a href="#">ePortfolios</a></li>
-              <li><a href="#">Shared Content</a></li>
-              <li><a href="#">The Hub</a></li>
-              <li><a href="#">Qwickly course Tools</a></li>
-              <li><a href="#">Global Announcements</a></li>
-            </ul>
-          </td>
+<body>
+  <table width="100%" style="border-collapse: collapse; height: 100vh;">
+    <tbody>
+      <tr>
+        <td valign="top" style="background-color: black; width: 80px;">
+          <!-- Kanbas Navigation -->
+          <ul class="wd-kanbas-navigation" style="list-style: none; padding: 0; margin: 0; color: white;">
+            <li class="wd-active">
+              <a href="../Profile/screen.html"><i class="fa-solid fa-user icon-account"></i>Account</a>
+            </li>
+            <li>
+              <a href="../../../Dashboard/screen.html"><i class="fa-solid fa-gauge"></i>Dashboard</a>
+            </li>
+            <li>
+              <a href="../../Courses/Home/screen.html"><i class="fa-solid fa-book"></i>Courses</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-calendar-days"></i>Calendar</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-inbox"></i> Inbox</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-regular fa-clock"></i> History</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-photo-film"></i> Studio</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Commons</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-circle-question"></i> Help</a>
+            </li>
+          </ul>
+        </td>
 
-          <td valign="top">
-            <h2>Jose Annunziato</h2>
-            <form>
-              Name:*<input
-                type="text"
-                value="Jose Annunziato"
-                placeholder="Jose Annunziato"
-              />
-              Pronouns:<select name="pronouns">
-                <option value="None">None</option>
-              </select>
-              <br />
-              <br />
-              Title: <input type="text" />
-            </form>
-            <h3>Contact</h3>
-            <p>
-              No registered services, you can add some on the
-              <a href="#">settings</a> page.
-            </p>
+        <td valign="top">
+          <ul>
+            <li><a href="#">Notifications</a></li>
+            <li><a href="../../Profile/screen.html">Profile</a></li>
+            <li><a href="#">Files</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">ePortfolios</a></li>
+            <li><a href="#">Shared Content</a></li>
+            <li><a href="#">The Hub</a></li>
+            <li><a href="#">Qwickly course Tools</a></li>
+            <li><a href="#">Global Announcements</a></li>
+          </ul>
+        </td>
 
-            <h3>Biography</h3>
-            <p>
-              Faculty, Software Engineer, AI, Space, and renewables enthusiast.
-            </p>
-            <textarea
-              cols="40"
-              ,
-              rows="4"
-              placeholder="Faculty, Software Engineer, AI, Space, and renewables enthusiast."
-            ></textarea>
-
-            <h3>Links</h3>
-            <ul>
-              <li>
-                <a href="#" target="_blank">YouTube</a> Links to an external
-                site.
-              </li>
-            </ul>
+        <td valign="top">
+          <h2>Jose Annunziato</h2>
+          <form>
+            Name:*<input type="text" value="Jose Annunziato" placeholder="Jose Annunziato" />
+            Pronouns:<select name="pronouns">
+              <option value="None">None</option>
+            </select>
             <br />
-
-            <table>
-              <tbody width="100%">
-                <tr>
-                  <td align="center" valign="top">
-                    <h4>Title</h4>
-                    <input type="text" placeholder="YouTube" /> ->
-                  </td>
-
-                  <td align="center" valign="top">
-                    <h4>URL</h4>
-                    <input type="text" placeholder="https://www.youtube.com/" />
-                    <a href="#">Remove</a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-
-            <button>Add another link</button>
             <br />
-            <a href="#"><button>Cancel</button></a>
-            <a href="../../Profile/screen.html"
-              ><button>Save Profile</button></a
-            >
-            <br />
-            <a href="../Edit/screen.html"><button>Edit Profile</button></a>
-            <a href="../../Profile/screen.html"
-              ><button>Cancel Editing</button></a
-            >
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </body>
+            Title: <input type="text" />
+          </form>
+          <h3>Contact</h3>
+          <p>
+            No registered services, you can add some on the
+            <a href="#">settings</a> page.
+          </p>
+
+          <h3>Biography</h3>
+          <p>
+            Faculty, Software Engineer, AI, Space, and renewables enthusiast.
+          </p>
+          <textarea cols="40" , rows="4"
+            placeholder="Faculty, Software Engineer, AI, Space, and renewables enthusiast."></textarea>
+
+          <h3>Links</h3>
+          <ul>
+            <li>
+              <a href="#" target="_blank">YouTube</a> Links to an external
+              site.
+            </li>
+          </ul>
+          <br />
+
+          <table>
+            <tbody width="100%">
+              <tr>
+                <td align="center" valign="top">
+                  <h4>Title</h4>
+                  <input type="text" placeholder="YouTube" /> ->
+                </td>
+
+                <td align="center" valign="top">
+                  <h4>URL</h4>
+                  <input type="text" placeholder="https://www.youtube.com/" />
+                  <a href="#">Remove</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <button>Add another link</button>
+          <br />
+          <a href="#"><button>Cancel</button></a>
+          <a href="../../Profile/screen.html"><button>Save Profile</button></a>
+          <br />
+          <a href="../Edit/screen.html"><button>Edit Profile</button></a>
+          <a href="../../Profile/screen.html"><button>Cancel Editing</button></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
 </html>
