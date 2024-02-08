@@ -25,6 +25,6 @@
   background-color: white;
 }
 
-.wd-kanbas-navigation li.wd-active a {
-  color: red;
-}
+.wd-kanbas-navigation li.wd-active > a {
+  color: red !important;
+} 

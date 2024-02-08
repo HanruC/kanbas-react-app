@@ -71,3 +71,13 @@ body {
   padding-top: 0;
 }
 
+.sidebars-container {
+  display: flex;
+  flex-direction: column;
+  padding-right: 15px; 
+}
+
+.course-sidebar {
+  margin-top: 20px; 
+
+}

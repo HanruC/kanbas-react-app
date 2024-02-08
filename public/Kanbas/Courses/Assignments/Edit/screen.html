@@ -1,193 +1,193 @@
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Edit</title>
-    <link rel="stylesheet" href="../../../../styles.css" />
-    <link rel="stylesheet" href="../../../Navigation/index.css" />
-    <link rel="stylesheet" href="../../../Courses/Navigation/index.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
-  </head>
-  <body>
-    <table width="100%">
-      <tbody>
-        <td valign="top" style="width: 80px; background-color: black; height: 100vh;">
-          <ul class="wd-kanbas-navigation">
-            <li><a href="http://northeastern.edu">N</a></li>
-            <li>
-              <a href="../../Account/Profile/screen.html"><i class="fa-solid fa-user icon-account"></i>Account</a>
-            </li>
-            <li>
-              <a href="../../../Dashboard/screen.html"><i class="fa-solid fa-gauge"></i>Dashboard</a>
-            </li>
-            <li class="wd-active">
-              <a href="../../Courses/Home/screen.html"><i class="fa-solid fa-book"></i>Courses</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-solid fa-calendar-days"></i>Calendar</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-solid fa-inbox"></i> Inbox</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-regular fa-clock"></i> History</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-solid fa-photo-film"></i> Studio</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Commons</a>
-            </li>
-            <li>
-              <a href="#"><i class="fa-solid fa-circle-question"></i> Help</a>
-            </li>
-          </ul>
-        </td>
 
-        <td valign="top" style="width: 80px; background-color: white; height: 100vh;">
-          <ul class="wd-navigation">
-            <li>
-                <a href="../../../Courses/Home/screen.html">Home</a>
-            </li>
-            <li>
-                <a href="#">Modules</a>
-            </li>
-            <li><a href="http://piazza.com">Piazza</a></li>
-            <li><a href="#">Zoom</a></li>
-            <li  class="wd-active">
-                <a href="../../../Courses/Assignments/screen.html">Assignments</a>
-            </li>
-            <li><a href="#">Quizzes</a></li>
-            <li><a href="../../../Courses/Grades/screen.html">Grades</a></li>
-            <li><a href="#">People</a></li>
+<head>
+  <meta charset="UTF-8" />
+  <title>Edit</title>
+  <link rel="stylesheet" href="../../../../styles.css" />
+  <link rel="stylesheet" href="../../../Navigation/index.css" />
+  <link rel="stylesheet" href="../../../Courses/Navigation/index.css" />
+  <link rel="stylesheet" href="../../Assignments/index.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="breadcrumb-bar d-none d-lg-block" aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">CS5610.11744.202310</a></li>
+      <li class="breadcrumb-item"><a href="#">Assignments</a></li>
+      <li class="breadcrumb-item active" aria-current="page">A1 ENV</li>
+    </ol>
+  </nav>
+
+  <div class="container-fluid mt-3">
+    <div class="row">
+      <div class="col-md-2 sidebar">
+        <ul class="wd-kanbas-navigation">
+          <li><a href="http://northeastern.edu">N</a></li>
+          <li>
+            <a href="../../../Account/Profile/screen.html"><i class="fa-solid fa-user icon-account"></i>Account</a>
+          </li>
+          <li>
+            <a href="../../Dashboard/screen.html"><i class="fa-solid fa-gauge"></i>Dashboard</a>
+          </li>
+          <li class="wd-active">
+            <a href="../../Courses/Home/screen.html"><i class="fa-solid fa-book"></i>Courses</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-calendar-days"></i>Calendar</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-inbox"></i> Inbox</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-regular fa-clock"></i> History</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-photo-film"></i> Studio</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Commons</a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-circle-question"></i> Help</a>
+          </li>
         </ul>
-        </td>
+      </div>
+      <div class="col-md-2 sidebar">
+        <ul class="wd-navigation">
+          <li>
+            <a href="../../Home/screen.html">Home</a>
+          </li>
+          <li>
+            <a href="../../Modules/screen.html">Modules</a>
+          </li>
+          <li><a href="http://piazza.com">Piazza</a></li>
+          <li><a href="#">Zoom</a></li>
+          <li class="wd-active">
+            <a href="../../Assignments/screen.html">Assignments</a>
+          </li>
+          <li><a href="#">Quizzes</a></li>
+          <li><a href="../../Grades/screen.html">Grades</a></li>
+          <li><a href="#">People</a></li>
+        </ul>
+      </div>
+      <div class="col-md-8">
+        <!-- Edit Assignment Form -->
+        <form>
+          <div class="d-flex justify-content-between mb-3">
+            <h2>Edit Assignment</h2>
+            <div>
+              <button type="button" class="btn btn-success"><i class="fa fa-check-circle"></i> Published</button>
+              <button type="button" class="btn btn-secondary"><i class="fa fa-ellipsis-v"></i></button>
+            </div>
+          </div>
 
-        <td valign="top">
-          <select name="speed-grader">
-            <option value="Speed-Grader">SpeedGrader</option>
-          </select>
-          <hr />
-          <form>
-            <h2>Assignment Name</h2>
-            <input type="text" placeholder="A1 - ENV + HTML" />
-            <br />
-            <br />
-            <textarea
-              name="assignment-description"
-              cols="20"
-              rows="2"
-              placeholder="This is the assginment Description"
-            ></textarea>
-            <br />
-            <br />
-            <label>Points</label>
-            <br />
-            <input type="number" placeholder="100" />
-            <br />
-            <br />
-            <label>Assignment Group</label>
-            <br />
-            <select name="assignment-group">
-              <option value="ASSSIGNMENTS">Assignments</option>
-            </select>
-            <br />
-            <br />
+          <!-- Assignment Name -->
+          <div class="mb-3">
+            <label for="assignmentName" class="form-label">Assignment Name</label>
+            <input type="text" class="form-control" id="assignmentName" placeholder="A1 - ENV + HTML">
+          </div>
 
-            <label>Display Grade as</label>
-            <br />
-            <select name="display-grade-as">
-              <option value="Percentage">Percentage</option>
-            </select>
-            <br />
-            <br />
+          <!-- Description -->
+          <div class="mb-3">
+            <label for="assignmentDescription" class="form-label">Description</label>
+            <textarea class="form-control" id="assignmentDescription" rows="4"></textarea>
+          </div>
 
-            <label>Submission Type</label>
-            <br />
-            <select name="submission-type">
-              <option value="Online">Online</option>
-            </select>
+          <!-- Points -->
+          <div class="mb-3 row">
+            <label for="points" class="col-sm-4 col-form-label text-end">Points</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="points" placeholder="100">
+            </div>
+          </div>
 
-            <br />
-            <br />
+          <!-- Assignment Group -->
+          <div class="mb-3 row">
+            <label for="assignmentGroup" class="col-sm-4 col-form-label text-end">Assignment Group</label>
+            <div class="col-sm-8">
+              <select class="form-select" id="assignmentGroup">
+              </select>
+            </div>
+          </div>
 
-            <label>Online Entry Options</label>
-            <br />
-            <label
-              ><input
-                name="online-entry-options"
-                value="TEXTENTRY"
-                type="checkbox"
-              />Text Entry</label
-            >
-            <br />
-            <label
-              ><input
-                name="online-entry-options"
-                value="WEBSITE URL"
-                type="checkbox"
-              />Website URL</label
-            >
-            <br />
-            <label
-              ><input
-                name="online-entry-options"
-                value="MEDIARECORDINGS"
-                type="checkbox"
-              />Media Recordings</label
-            >
-            <br />
-            <label
-              ><input
-                name="online-entry-options"
-                value="STUDENTANNOTATION"
-                type="checkbox"
-              />Student Annotation</label
-            >
-            <br />
-            <label
-              ><input
-                name="online-entry-options"
-                value="FILEUPLOADS"
-                type="checkbox"
-              />File Uploads</label
-            >
-            <br />
-            <br />
+          <!-- Display Grade as -->
+          <div class="mb-3 row">
+            <label for="displayGradeAs" class="col-sm-4 col-form-label text-end">Display Grade as</label>
+            <div class="col-sm-8">
+              <select class="form-select" id="displayGradeAs">
+              </select>
+            </div>
+          </div>
 
-            <label>Assign</label>
-            <br />
-            <label for="Assign">Assign to</label>
-            <br />
-            <input type="text" placeholder="Everyone" />
-            <br />
-            <br />
-            <label>Due</label>
-            <br />
-            <input type="date" value="2000-01-01" />
-            <br />
-            <br />
+          <div class="mb-3 row">
+            <label for="submissionType" class="col-sm-4 col-form-label text-end">Submission Type</label>
+            <div class="col-sm-8">
+              <select class="form-select" id="submissionType">
+              </select>
+            </div>
+          </div>
 
-            <label>Available From</label>
-            <br />
-            <input type="date" value="2000-01-01" />
+          <label for="assignTo" class="form-label">Assign</label>
+          <div class="assign-section mb-4">
+            <!-- Assign to -->
 
-            <br />
-            <br />
-            <label>Until</label>
-            <br />
-            <input type="date" value="2000-01-01" />
+            <div class="mb-3">
+              <label for="assignTo" class="form-label">Assign to</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="assignTo" value="Everyone">
+                <button class="btn btn-outline-secondary" type="button">
+                  <i class="fa fa-times"></i>
+                </button>
+              </div>
+            </div>
 
-            <br />
-            <br />
-            <a href="../../Assignments/screen.html"
-              ><button type="button">Cancel</button></a
-            >
-            <a href="../../Assignments/screen.html"
-              ><button type="button">Save</button></a
-            >
-          </form>
-        </td>
-      </tbody>
-    </table>
-  </body>
+            <!-- Due date -->
+            <div class="mb-3">
+              <label for="dueDate" class="form-label">Due</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="dueDate" placeholder="Sep 18, 2023, 11:59 PM">
+                <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+              </div>
+            </div>
+
+            <!-- Available from and Until -->
+            <div class="mb-3 row">
+              <div class="col">
+                <label for="availableFrom" class="form-label">Available from</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="availableFrom" placeholder="Sep 6, 2023, 12:00 AM">
+                  <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                </div>
+              </div>
+              <div class="col">
+                <label for="until" class="form-label">Until</label>
+                <div class="input-group">
+                  <input type="text" class="form-control" id="until" placeholder="Dec 31, 2023, 11:59 PM">
+                  <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add button -->
+            <div class="mt-3">
+              <button type="button" class="btn btn-outline-secondary">+ Add</button>
+            </div>
+          </div>
+
+
+          <!-- Save and Cancel Buttons -->
+          <div class="d-flex justify-content-end">
+            <a href="../../Assignments/screen.html"><button type="button" class="btn btn-secondary me-2">Cancel</button></a>
+            <a href="../../Assignments/screen.html"><button type="submit" class="btn btn-success">Save</button></a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>

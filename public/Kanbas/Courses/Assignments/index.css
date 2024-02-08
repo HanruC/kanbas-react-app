@@ -1,0 +1,151 @@
+.no-rounded-corners {
+    border-radius: 0 !important;
+  }
+
+  .green-border-left {
+    border-left: 4px solid green;
+  }
+
+  .icon-account {
+    color: #000;
+  }
+
+  .wd-active {
+    border-left: 4px solid #000;
+    background-color: #fff;
+  }
+
+  .wd-active a {
+    color: #000 !important;
+  }
+
+  .wd-active::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 100%;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+  }
+  
+  body, html {
+    height: 100%;
+  }
+
+  .sidebar {
+    height: calc(100vh - 56px); 
+    overflow-y: auto;
+  }
+
+  .breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.breadcrumb-bar {
+    background-color: #f8f9fa;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+}
+
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: "›";
+    color: #dc3545;
+}
+
+  .breadcrumb-item a {
+    color: #007bff; 
+  }
+
+  .breadcrumb-item.active a {
+    color: #dc3545; 
+    text-decoration: none;
+}
+
+
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .row > [class^="col-"] {
+    padding-right: 15px; 
+    padding-left: 15px; 
+  }
+
+  .list-group-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0; 
+  }
+  
+  .list-group-item .badge {
+    background-color: #28a745; 
+  }
+  
+  .form-control {
+    border-radius: 0; 
+  }
+  
+  .btn {
+    margin-left: 0.5rem; 
+  }
+
+  .publish-btn {
+    background-color: #28a745;
+    color: white;
+  }
+
+  .publish-btn:hover {
+    background-color: #218838;
+  }
+
+  .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+  }
+
+  .wd-navigation .wd-active a {
+    color: black; 
+  }
+
+  .assign-section {
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    padding: 20px;
+    border-radius: 0.25rem;
+  }
+  
+  .assign-section .input-group-text {
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    color: #495057;
+  }
+  
+  .assign-section .form-control {
+    border: 1px solid #ced4da;
+  }
+  
+  .assign-section .btn-outline-secondary {
+    border-color: #ced4da;
+  }
+  
+  .wd-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .wd-kanbas-navigation,
+  .wd-course-navigation {
+    width: 100px; 
+    flex: 0 0 auto;
+  }
+  
+  .wd-assignments-content {
+    flex-grow: 1; 
+  }
+  
