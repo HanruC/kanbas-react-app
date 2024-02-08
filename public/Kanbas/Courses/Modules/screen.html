@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Home</title>
+    <title>Course Modules</title>
     <link rel="stylesheet" href="../../../styles.css">
     <link rel="stylesheet" href="../../Navigation/index.css">
     <link rel="stylesheet" href="../../Courses/Navigation/index.css">
@@ -12,87 +11,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Top Bar for small screens -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top d-lg-none">
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#kanbasNavSidebar" aria-controls="kanbasNavSidebar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#courseNavSidebar" aria-controls="courseNavSidebar">
-            <span class="fa fa-chevron-down"></span>
-        </button>
-    </nav>
-
-    <!-- Offcanvas Kanbas Navigation for small screens -->
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="kanbasNavSidebar" aria-labelledby="kanbasNavSidebarLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="kanbasNavSidebarLabel">Kanbas Navigation</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <ul class="wd-kanbas-navigation">
-                <li><a href="http://northeastern.edu">N</a></li>
-                <li>
-                  <a href="../Profile/screen.html"><i class="fa-solid fa-user icon-account"></i>Account</a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa-solid fa-gauge"></i>Dashboard</a>
-                </li>
-                <li class="wd-active">
-                  <a href="../../Courses/Home/screen.html"><i class="fa-solid fa-book"></i>Courses</a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa-solid fa-calendar-days"></i>Calendar</a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa-solid fa-inbox"></i> Inbox</a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa-regular fa-clock"></i> History</a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa-solid fa-photo-film"></i> Studio</a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Commons</a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa-solid fa-circle-question"></i> Help</a>
-                </li>
-              </ul>
-        </div>
-    </div>
-
-    <!-- Offcanvas Course Navigation for small screens -->
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="courseNavSidebar" aria-labelledby="courseNavSidebarLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="courseNavSidebarLabel">Course Navigation</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-            <ul class="wd-navigation">
-                <li class="wd-active">
-                    <a href="../Home/screen.html">Home</a>
-                </li>
-                <li>
-                    <a href="../Modules/screen.html">Modules</a>
-                </li>
-                <li><a href="http://piazza.com">Piazza</a></li>
-                <li><a href="#">Zoom</a></li>
-                <li>
-                    <a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
-                </li>
-                <li><a href="#">Quizzes</a></li>
-                <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
-                <li><a href="#">People</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="container-fluid pt-1">
-        <div class="row gx-0">
+    <div class="container-fluid">
+        <div class="row">
             <!-- Kanbas Navigation Sidebar -->
-            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="col-md-2 d-none d-md-block bg-light">
                 <ul class="wd-kanbas-navigation">
                     <li><a href="http://northeastern.edu">N</a></li>
                     <li>
@@ -123,15 +45,16 @@
                       <a href="#"><i class="fa-solid fa-circle-question"></i> Help</a>
                     </li>
                   </ul>
-            </nav>
+            </div>
 
-            <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <!-- Course Navigation Sidebar -->
+            <div class="col-md-2 d-none d-md-block bg-light">
                 <ul class="wd-navigation">
-                    <li class="wd-active">
+                    <li>
                         <a href="/Kanbas/Courses/Home/screen.html">Home</a>
                     </li>
-                    <li>
-                        <a href="../Modules/screen.html">Modules</a>
+                    <li class="wd-active">
+                        <a href="../Modules/index.html">Modules</a>
                     </li>
                     <li><a href="http://piazza.com">Piazza</a></li>
                     <li><a href="#">Zoom</a></li>
@@ -142,10 +65,10 @@
                     <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
                     <li><a href="#">People</a></li>
                 </ul>
-            </nav>
+            </div>
 
             <!-- Main Content -->
-            <main class="col-md-6 col-lg-6 ">
+            <div class="col-md-8">
                 <div class="col-12 col-lg-9">
                     <div class="d-flex justify-content-between">
                         <button type="button" class="btn btn-secondary">Collapse All</button>
@@ -252,62 +175,12 @@
                         </li>
                     </ul>
                 </div>
-            </main>
-
-            <!-- Course Status Sidebar -->
-            <aside class="col-md-2 d-none d-md-block bg-light sidebar">
-                <div class="card mb-3">
-                    <div class="card-header bg-success text-white d-flex justify-content-between align-items-center">
-                        <span>Course Status</span>
-                        <button class="btn btn-light btn-sm">Unpublish</button>
-                    </div>
-                    <div class="card-body">
-                        <button class="btn btn-success w-100 mb-2">Published</button>
-                        <div class="list-group list-group-flush">
-                            <a href="#" class="list-group-item list-group-item-action">Import Existing Content</a>
-                            <a href="#" class="list-group-item list-group-item-action">Import from Commons</a>
-                            <a href="#" class="list-group-item list-group-item-action">Choose Home Page</a>
-                            <a href="#" class="list-group-item list-group-item-action">View Course Stream</a>
-                            <a href="#" class="list-group-item list-group-item-action">New Announcement</a>
-                            <a href="#" class="list-group-item list-group-item-action">New Analytics</a>
-                            <a href="#" class="list-group-item list-group-item-action">View Course Notifications</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- To Do Section -->
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title">To Do</h5>
-                        <div class="list-group">
-                            <a href="#"
-                                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center text-danger">
-                                Grade A1 - ENV + HTML
-                                <span class="badge bg-primary rounded-pill">1</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Coming Up Section -->
-                <div class="card">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between align-items-center mb-3">
-                            <h5 class="card-title">Coming Up</h5>
-                            <a href="#" class="btn btn-outline-primary btn-sm">
-                                <i class="fa fa-calendar" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <div class="list-group">
-                            <a href="#" class="list-group-item list-group-item-action text-danger">Lecture CS4550.12631.202410 Sep 7
-                                at 11:45am</a>
-                        </div>
-                    </div>
-                </div>
-            </aside>
+            </div>
         </div>
     </div>
 
+    <!-- Include the navigation lists HTML here or via PHP includes if supported -->
+    <!-- Include your JavaScript files here -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

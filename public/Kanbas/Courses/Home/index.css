@@ -1,0 +1,73 @@
+/* Custom styles for modules */
+.wd-modules,
+.wd-modules * {
+  border-radius: 0;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wd-modules {
+  margin: 5px;
+}
+
+.wd-modules > li {
+  background-color: lightgray;
+  border: 1px solid gray !important;
+}
+
+.wd-modules > li, .sidebar > .card {
+  margin-bottom: 5px;
+}
+
+.wd-modules > li > div {
+  padding: 6px;
+}
+
+.wd-modules > li > ul > li {
+  padding: 5px;
+  border-top: 1px solid gray !important;
+  border-left: 2px solid green;
+}
+
+.wd-modules > li {
+  margin-bottom: 20px;
+}
+
+.sidebar {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.main-content {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+body {
+  padding-top: 60px;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.row > [class^="col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar + .container-fluid {
+  padding-top: 0;
+}
+
