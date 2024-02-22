@@ -1,0 +1,52 @@
+.wd-kanbas-navigation {
+  background-color: black;
+  list-style: none;
+  color: white;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100px; /* Adjust width as necessary */
+  height: 100%;
+  display: flex; /* This will enable centering for child elements */
+  flex-direction: column; /* Align children vertically */
+}
+
+.wd-kanbas-navigation .list-group-item {
+  padding: 10px;
+  font-size: 1.1em;
+  text-align: center; /* Center the text */
+  display: flex; /* Use flexbox for alignment */
+  flex-direction: column; /* Stack icon and text vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+}
+
+.wd-kanbas-navigation .list-group-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.8em;
+}
+
+.wd-kanbas-navigation .list-group-item.active, /* Changed from .wd-active to .active */
+.wd-kanbas-navigation .list-group-item.active a { /* Apply styles directly to the link */
+  background-color: white;
+  color: red !important; /* Ensure text is red */
+}
+
+.logo-container {
+  width: 100%;
+  display: flex; /* Use flexbox for alignment */
+  justify-content: center; /* Center logo horizontally */
+  align-items: center; /* Center logo vertically */
+}
+
+.logo {
+  width: 85px; /* Match the width of the sidebar */
+  height: auto; /* Adjust height automatically */
+  object-fit: cover; /* Ensure the logo covers the area */
+}
+
+.wd-icon {
+  font-size: 2em; /* Adjust icon size as needed */
+  margin-bottom: 5px; /* Space between icon and text */
+}

@@ -1,0 +1,13 @@
+[
+  { "_id": "1", "user": "222", "course": "RS101" },
+  { "_id": "2", "user": "223", "course": "RS101" },
+  { "_id": "3", "user": "224", "course": "RS101" },
+
+  { "_id": "4", "user": "225", "course": "RS102" },
+  { "_id": "5", "user": "226", "course": "RS102" },
+  { "_id": "6", "user": "227", "course": "RS102" },
+
+  { "_id": "7", "user": "228", "course": "RS103" },
+  { "_id": "8", "user": "229", "course": "RS103" },
+  { "_id": "9", "user": "230", "course": "RS103" }
+]

@@ -1,0 +1,90 @@
+/* Overall padding for the dashboard container */
+.p-4 {
+    padding: 1rem;
+}
+
+/* Dashboard title styling */
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* Subtitle for the number of courses */
+h2 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-left: 1.25rem; 
+    margin-bottom: 1rem;
+}
+
+/* Ensures the row and columns are displayed correctly */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; 
+}
+
+/* Styling for each course card */
+.card {
+    width: 300px; 
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    overflow: hidden; 
+}
+
+/* Header of the card, where dynamic background color is applied */
+.card-image {
+    background-color: rgb(47, 165, 255); 
+    height: 150px; 
+    position: relative; 
+}
+
+/* Icon styling within the card header */
+.card-icon {
+    position: absolute;
+    top: 10px; /* Distance from the top edge of the card-header */
+    right: 10px; /* Distance from the right edge of the card-header */
+    color: white; /* Color of the icon */
+    font-size: 24px; /* Size of the icon */
+}
+
+/* Card body styling for content area */
+.card-body {
+    padding: 1rem;
+    flex-grow: 1; 
+}
+
+/* Title within the card body */
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Text within the card body */
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Styling for the link/button to view course */
+.btn-primary {
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
+    display: inline-block;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+
+
