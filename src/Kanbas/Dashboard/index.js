@@ -4,12 +4,6 @@ import { Link } from "react-router-dom";
 import './index.css';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 
-// Function to dynamically assign a background color
-// function getBackgroundColor(courseId) {
-//     const colors = ['#61dafb', '#6f42c1', '#3776ab', '#f0db4f', '#5382a1'];
-//     return colors[parseInt(courseId, 10) % colors.length];
-// }
-
 function Dashboard() { 
     return (
         <div className="p-4">

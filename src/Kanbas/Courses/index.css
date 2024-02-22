@@ -1,0 +1,23 @@
+/* index.css */
+.course-header {
+    display: flex;
+    align-items: center;
+    background-color: #E50914; 
+    color: white;
+    padding: 10px;
+  }
+  
+  .menu-icon {
+    margin-right: 10px;
+    font-size: 24px;
+  }
+  
+  .content-area {
+    flex-grow: 1; 
+    overflow-y: auto; 
+    position: relative; 
+    top: 0; 
+    left: 320px; 
+    padding: 1rem; 
+  }
+  
