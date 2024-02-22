@@ -6,8 +6,6 @@ function AssignmentEditor() {
   const { assignmentId, courseId } = useParams();
   const assignment = database.assignments.find((a) => a._id === assignmentId);
   const navigate = useNavigate();
-  
-  // State to manage the assignment title for editing
   const [assignmentTitle, setAssignmentTitle] = useState(assignment?.title);
 
   const handleSave = () => {

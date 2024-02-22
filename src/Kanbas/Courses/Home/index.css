@@ -1,15 +1,26 @@
-.btn-left-content {
-    display: flex !important;
-    justify-content: flex-start !important;
-    align-items: center !important;
+/* index.css */
+
+.btn-status {
+    display: flex;
+    align-items: center;
+    width: 100%; 
 }
 
-.wd-icon {
-    margin-right: 5px !important;
+.status-container {
+    padding: 10px;
+}
+
+/* Icons and text in buttons */
+.btn-status .wd-icon {
+    margin-right: 10px;
+}
+
+.button-text {
+    flex-grow: 1;
 }
 
 @media only screen and (max-width: 768px) {
     .course-status {
-        display: none;
+        display: none; 
     }
 }

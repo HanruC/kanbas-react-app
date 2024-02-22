@@ -12,18 +12,18 @@ function Grades() {
         <table className="table">
           <thead>
             <th>Student Name</th>
-            {assignments.map((assignment) => (<th key={assignment._id}>{assignment.title}</th>))}
+            {assignments.map((assignment) => (<th>{assignment.title}</th>))}
           </thead>
           <tbody>
             {enrollments.map((enrollment) => {
               const user = database.users.find((user) => user._id === enrollment.user);
               return (
-                <tr key={enrollment._id}>
-                   <td>{user?.firstName} {user?.lastName}</td>
+                <tr>
+                   <td>{user.firstName} {user.lastName}</td>
                    {assignments.map((assignment) => {
                      const grade = database.grades.find(
                        (grade) => grade.student === enrollment.user && grade.assignment === assignment._id);
-                     return (<td key={assignment._id}>{grade?.grade || ""}</td>);})}
+                       return (<td>{grade?.grade || ""}</td>);})}
                 </tr>);
             })}
           </tbody></table>

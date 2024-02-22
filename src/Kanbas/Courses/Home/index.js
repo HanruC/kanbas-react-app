@@ -8,47 +8,42 @@ import { PiSpeakerHighDuotone } from "react-icons/pi"
 import { BiSolidBellRing } from "react-icons/bi"
 import "./index.css"
 
-
 function Home() {
     return (
-        <div className="row">
-            <div className="col-lg-8 col-md-6 col-sm-12">
-                <h2>Home</h2>
-                <ModuleList />
-            </div>
-            <div className="col-lg-4 col-md-6 d-none d-md-block">
-
-                <h2>Status</h2>
-                <div className="course-status">
-                    <h5>Course Status</h5>
-                    
-                    <div>
-                        <button type="button" className="btn btn-secondary mb-1 btn-left-content" style={{ width: '250px' }}>
-                            <LiaFileImportSolid className="wd-icon" /> Import Existing Content
-                        </button>
-                        <button type="button" className="btn btn-secondary mb-1 btn-left-content" style={{ width: '250px' }}>
-                            <CiImport className="wd-icon"/> Import from Commons
-                        </button>
-                        <button type="button" className="btn btn-secondary mb-1 btn-left-content" style={{ width: '250px' }}>
-                            <BiTargetLock className="wd-icon"/> Choose Home Page
-                        </button>
-                        <button type="button" className="btn btn-secondary mb-1 btn-left-content" style={{ width: '250px' }}>
-                            <BsGraphUp className="wd-icon" /> View Course Stream
-                        </button>
-                        
-                        <button type="button" className="btn btn-secondary mb-1 btn-left-content" style={{ width: '250px' }}>
-                            <PiSpeakerHighDuotone className="wd-icon"/> New Announcement
-                        </button>
-                        <button type="button" className="btn btn-secondary mb-1 btn-left-content" style={{ width: '250px' }}>
-                            <BsGraphUp className="wd-icon"/> New Analytics
-                        </button>
-                        <button type="button" className="btn btn-secondary mb-1 btn-left-content" style={{ width: '250px' }}>
-                            <BiSolidBellRing className="wd-icon"/> View Course Notifications
-                        </button>
+        <div className="container-fluid">
+            <div className="row">
+                {/* Module List */}
+                <div className="col-lg-6 col-md-6 col-sm-12">
+                    <h2>Home</h2>
+                    <ModuleList />
+                </div>
+                {/* Course Status */}
+                <div className="col-lg-4 col-md-6 d-none d-lg-block">
+                    <div className="status-container">
+                        <h2>Status</h2>
+                        <div className="course-status">
+                            <h5>Course Status</h5>
+                            <Button icon={<LiaFileImportSolid />} text="Import Existing Content" />
+                            <Button icon={<CiImport />} text="Import from Commons" />
+                            <Button icon={<BiTargetLock />} text="Choose Home Page" />
+                            <Button icon={<BsGraphUp />} text="View Course Stream" />
+                            <Button icon={<PiSpeakerHighDuotone />} text="New Announcement" />
+                            <Button icon={<BsGraphUp />} text="New Analytics" />
+                            <Button icon={<BiSolidBellRing />} text="View Course Notifications" />
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    );
+}
+
+function Button({ icon, text }) {
+    return (
+        <button type="button" className="btn btn-secondary mb-1 btn-status">
+            {icon}
+            <span className="button-text">{text}</span>
+        </button>
     );
 }
 
