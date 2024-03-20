@@ -1,4 +1,5 @@
 import ModuleList from "./List";
+
 function Modules() {
   return (
     <div>
@@ -7,4 +8,5 @@ function Modules() {
     </div>
   );
 }
+
 export default Modules;

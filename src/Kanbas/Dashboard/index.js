@@ -1,57 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
-import db from '../Database';
 import './index.css';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 
-function Dashboard() {
-  const [courses, setCourses] = useState(db.courses);
-  const [course, setCourse] = useState({
-    _id: "0",
-    name: "New Course",
-    number: "New Number",
-    startDate: "2023-09-10",
-    endDate: "2023-12-15",
-    image: "/images/reactjs.jpg"
-  });
-
-  const addNewCourse = () => {
-    const newCourse = { ...course, _id: new Date().getTime().toString() };
-    setCourses([...courses, { ...course, ...newCourse }]);
-    setCourse({
-      _id: "0",
-      name: "New Course",
-      number: "New Number",
-      startDate: "2023-09-10",
-      endDate: "2023-12-15",
-      image: "/images/reactjs.jpg"
-    });
-  };
-
-  const deleteCourse = (courseId) => {
-    setCourses(courses.filter((course) => course._id !== courseId));
-  };
-
-  const updateCourse = () => {
-    setCourses(
-      courses.map((c) => {
-        if (c._id === course._id) {
-          return course;
-        } else {
-          return c;
-        }
-      })
-    );
-    setCourse({
-      _id: "0",
-      name: "New Course",
-      number: "New Number",
-      startDate: "2023-09-10",
-      endDate: "2023-12-15",
-      image: "/images/reactjs.jpg"
-    });
-  };
-
+function Dashboard({ courses, course, setCourse, addNewCourse, deleteCourse, updateCourse }) {
   return (
     <div className="p-4">
       <h1>Dashboard</h1>
@@ -79,7 +31,10 @@ function Dashboard() {
         type="date"
         onChange={(e) => setCourse({ ...course, endDate: e.target.value })}
       />
-      <button className="btn btn-primary" onClick={course._id === "0" ? addNewCourse : updateCourse}>
+      <button
+        className="btn btn-primary"
+        onClick={course._id === "0" ? addNewCourse : updateCourse}
+      >
         {course._id === "0" ? 'Add' : 'Update'}
       </button>
       <hr />
