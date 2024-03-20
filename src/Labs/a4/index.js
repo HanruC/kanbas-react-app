@@ -1,6 +1,5 @@
 import React from "react";
 import ReduxExamples from "./ReduxExamples";
-import Add from "./Add";
 import ClickEvent from "./ClickEvent";
 import PassingDataOnEvent from "./PassingDataOnEvent";
 import PassingFunctions from "./PassingFunctions";
@@ -19,7 +18,6 @@ function Assignment4() {
     <>
       <h1>Assignment 4</h1>
       <ReduxExamples />
-      <Add a={1} b={2} />
       <ClickEvent />
       <PassingDataOnEvent />
       <PassingFunctions theFunction={sayHello} />
