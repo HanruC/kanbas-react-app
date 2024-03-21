@@ -1,31 +1,58 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
-import database from "../../Database";
-import 'bootstrap/dist/css/bootstrap.min.css'; 
+import { useSelector, useDispatch } from "react-redux";
+import { deleteAssignment } from "./assignmentsReducer";
+import { Button, ListGroup } from "react-bootstrap";
 
 function Assignments() {
   const { courseId } = useParams();
-  const assignments = database.assignments.filter(
-    (assignment) => assignment.course === courseId
+  const assignments = useSelector((state) =>
+    state.assignmentsReducer.assignments.filter(
+      (assignment) => assignment.course === courseId
+    )
   );
+  const dispatch = useDispatch();
+
+  const handleDelete = (assignmentId) => {
+    if (window.confirm("Are you sure you want to delete this assignment?")) {
+      dispatch(deleteAssignment(assignmentId));
+    }
+  };
 
   return (
     <div className="container mt-5">
       <div className="row">
         <div className="col-12 col-lg-10 mx-auto">
-          <div className="list-group">
-            <div className="list-group-item list-group-item-action list-group-item-secondary">
+          <ListGroup>
+            <ListGroup.Item variant="secondary">
               Assignments for course {courseId}
-            </div>
+            </ListGroup.Item>
             {assignments.map((assignment) => (
-              <Link
+              <ListGroup.Item
                 key={assignment._id}
-                to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
-                className="list-group-item list-group-item-action">
-                {assignment.title}
-              </Link>
+                className="d-flex justify-content-between align-items-center"
+              >
+                <Link
+                  to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
+                >
+                  {assignment.title}
+                </Link>
+                <Button
+                  variant="danger"
+                  size="sm"
+                  onClick={() => handleDelete(assignment._id)}
+                >
+                  Delete
+                </Button>
+              </ListGroup.Item>
             ))}
-          </div>
+          </ListGroup>
+          <Link
+            to={`/Kanbas/Courses/${courseId}/Assignments/new`}
+            className="btn btn-primary mt-3"
+          >
+            + Assignment
+          </Link>
         </div>
       </div>
     </div>

@@ -83,5 +83,4 @@ function Dashboard({ courses, course, setCourse, addNewCourse, deleteCourse, upd
     </div>
   );
 }
-
 export default Dashboard;

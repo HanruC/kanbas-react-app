@@ -5,25 +5,26 @@ import {
   addModule,
   deleteModule,
   updateModule,
-  setModule,
 } from "./reducer";
 import { ListGroup, Button, Form } from "react-bootstrap";
 
 function ModuleList() {
   const { courseId } = useParams();
   const modules = useSelector((state) => state.modulesReducer.modules);
-  const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
-  const [editing, setEditing] = useState(false);
+  const [newModule, setNewModule] = useState({
+    name: "",
+    description: "",
+    course: courseId,
+  });
 
-  const handleEdit = (module) => {
-    dispatch(setModule(module));
-    setEditing(true);
-  };
-
-  const handleUpdate = () => {
-    dispatch(updateModule(module));
-    setEditing(false);
+  const handleAddModule = () => {
+    dispatch(addModule(newModule));
+    setNewModule({
+      name: "",
+      description: "",
+      course: courseId,
+    });
   };
 
   return (
@@ -32,17 +33,17 @@ function ModuleList() {
         <ListGroup.Item>
           <Form.Control
             type="text"
-            value={module.name}
-            onChange={(e) => dispatch(setModule({ ...module, name: e.target.value }))}
+            value={newModule.name}
+            onChange={(e) => setNewModule({ ...newModule, name: e.target.value })}
             placeholder="New Module"
           />
           <Form.Control
             as="textarea"
-            value={module.description}
-            onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))}
+            value={newModule.description}
+            onChange={(e) => setNewModule({ ...newModule, description: e.target.value })}
             placeholder="New Description"
           />
-          <Button variant="success" onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+          <Button variant="success" onClick={handleAddModule}>
             Add
           </Button>
         </ListGroup.Item>
@@ -50,54 +51,71 @@ function ModuleList() {
           .filter((module) => module.course === courseId)
           .map((module, index) => (
             <ListGroup.Item key={index}>
-              {editing && module._id === module._id ? (
-                <>
-                  <Form.Control
-                    type="text"
-                    value={module.name}
-                    onChange={(e) => dispatch(setModule({ ...module, name: e.target.value }))}
-                  />
-                  <Form.Control
-                    as="textarea"
-                    value={module.description}
-                    onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))}
-                  />
-                  <Button variant="primary" onClick={handleUpdate}>
-                    Save
-                  </Button>
-                </>
-              ) : (
-                <>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div>
-                      <div>{module.name}</div>
-                      <div>{module.description}</div>
-                      <div>{module._id}</div>
-                    </div>
-                    <div>
-                      <Button
-                        variant="danger"
-                        size="sm"
-                        onClick={() => dispatch(deleteModule(module._id))}
-                        className="me-2"
-                      >
-                        Delete
-                      </Button>
-                      <Button
-                        variant="primary"
-                        size="sm"
-                        onClick={() => handleEdit(module)}
-                      >
-                        Update
-                      </Button>
-                    </div>
-                  </div>
-                </>
-              )}
+              <ModuleItem module={module} />
             </ListGroup.Item>
           ))}
       </ListGroup>
     </div>
+  );
+}
+
+function ModuleItem({ module }) {
+  const dispatch = useDispatch();
+  const [editing, setEditing] = useState(false);
+  const [updatedModule, setUpdatedModule] = useState(module);
+
+  const handleUpdate = () => {
+    dispatch(updateModule(updatedModule));
+    setEditing(false);
+  };
+
+  return (
+    <>
+      {editing ? (
+        <>
+          <Form.Control
+            type="text"
+            value={updatedModule.name}
+            onChange={(e) => setUpdatedModule({ ...updatedModule, name: e.target.value })}
+          />
+          <Form.Control
+            as="textarea"
+            value={updatedModule.description}
+            onChange={(e) => setUpdatedModule({ ...updatedModule, description: e.target.value })}
+          />
+          <Button variant="primary" onClick={handleUpdate}>
+            Save
+          </Button>
+        </>
+      ) : (
+        <>
+          <div className="d-flex justify-content-between align-items-center">
+            <div>
+              <div>{module.name}</div>
+              <div>{module.description}</div>
+              <div>{module._id}</div>
+            </div>
+            <div>
+              <Button
+                variant="danger"
+                size="sm"
+                onClick={() => dispatch(deleteModule(module._id))}
+                className="me-2"
+              >
+                Delete
+              </Button>
+              <Button
+                variant="primary"
+                size="sm"
+                onClick={() => setEditing(true)}
+              >
+                Update
+              </Button>
+            </div>
+          </div>
+        </>
+      )}
+    </>
   );
 }
 

@@ -113,5 +113,4 @@ function Kanbas() {
     </Provider>
   );
 }
-
 export default Kanbas;
